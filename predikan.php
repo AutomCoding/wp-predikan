@@ -3,7 +3,7 @@
  * Predikan
  *
  * Plugin Name: Predikan
- * Description: Ladda upp predikningar till din kyrkas webbplats som en poddsändning samt en tabell på någon av era sidor.
+ * Description: Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
  * Version:     1.0.0
  * Author:      Filip Bengtsson
  * Author URI:  https://github.com/AutomCoding/
