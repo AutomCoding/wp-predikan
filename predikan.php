@@ -57,7 +57,7 @@ class Predikan {
 				"new_item" => __("New sermon", "predikan"),
 				"view_item" => __("View sermon", "predikan"),
 				"view_items" => __("View sermons", "predikan"),
-				"search_items" => __("Seaarch sermons", "predikan"),
+				"search_items" => __("Search sermons", "predikan"),
 				"not_found" => __("No sermons found", "predikan"),
 				"not_found_in_trash" => __("No sermons found in trash", "predikan"),
 				"all_items" => __("All sermons", "predikan"),
