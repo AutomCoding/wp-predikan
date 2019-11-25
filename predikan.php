@@ -107,7 +107,7 @@ class Predikan {
 				"popular_items" => __("Popular preacher", "predikan"),
 				"not_found" => __("No preachers found", "predikan"),
 				"not_found_in_trash" => __("No preachers found in trash", "predikan"),
-				"all_items" => __("All preacher", "predikan"),
+				"all_items" => __("All preachers", "predikan"),
 				"add_or_remove_items" => __("Add or remove preachers", "predikan"),
 				"menu_name" => __("Preachers", "predikan"),
 				"filter_items_list" => __("Filter list of preachers", "predikan"),
