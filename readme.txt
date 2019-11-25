@@ -22,6 +22,9 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= NEXT =
+* Wider input box for the audio URL.
+
 = 1.2.0 =
 * Bugfix: No speakers in table.
 

@@ -159,7 +159,7 @@ class Predikan {
 		// Callback for meta box for the audio file for CPT predikan
 		$file = get_post_meta($post->ID, "_predikan_audio_file", true);
 		?>
-			<input id="predikan_audio_file" name="predikan_audio_file" type="url" value="<?php echo $file; ?>"/>
+			<input id="predikan_audio_file" name="predikan_audio_file" style="width:100%;" type="url" value="<?php echo $file; ?>"/>
 			<p class="howto">
 				<?php echo __("Complete URL of the audiofile that will be posted in the podcast and displayed on the website.", "predikan"); ?>
 			</p>
