@@ -201,7 +201,7 @@ class Predikan {
 		// Handle updates
 		if (array_key_exists("podcast_settings_submit", $_POST)) {
 			update_option("predikan_description", $_POST["predikan_description"]);
-			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">";
+			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">");
 			print(__("The settings have been saved", "predikan"));
 			print("</div>");
 		}
