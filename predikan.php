@@ -49,26 +49,26 @@ class Predikan {
 		// Register the 'predikan' post type
 		$args = array(
 			"labels" => array(
-				"name" => "Predikningar",
-				"singular_name" => "Predikan",
-				"add_new" => "Lägg till ny",
-				"add_new_item" => "Lägg till ny predikan",
-				"edit_item" => "Redigera predikan",
-				"new_item" => "Ny predikan",
-				"view_item" => "Visa predikan",
-				"view_items" => "Visa predikningar",
-				"search_items" => "Sök predikningar",
-				"not_found" => "Inga predikningar hittade",
-				"not_found_in_trash" => "Inga predikningar i papperskorgen",
-				"all_items" => "Alla predikningar",
-				"attributes" => "Attribut för predikningar",
-				"menu_name" => "Predikningar",
-				"filter_items_list" => "Filtrera predikolista",
-				"items_list_navigation" => "Navigation för lista över predikningar",
-				"items_list" => "Lista över predikningar",
-				"item_published" => "Predikan publicerad",
-				"item_scheduled" => "Predikan är schemalagd för publicering",
-				"item_updated" => "Predikan har uppdaterats"
+				"name" => __("Sermons", "predikan"),
+				"singular_name" => __("Sermon", "predikan"),
+				"add_new" => __("Add new", "predikan"),
+				"add_new_item" => __("Add new sermon", "predikan"),
+				"edit_item" => __("Edit sermon", "predikan"),
+				"new_item" => __("New sermon", "predikan"),
+				"view_item" => __("View sermon", "predikan"),
+				"view_items" => __("View sermons", "predikan"),
+				"search_items" => __("Seaarch sermons", "predikan"),
+				"not_found" => __("No sermons found", "predikan"),
+				"not_found_in_trash" => __("No sermons found in trash", "predikan"),
+				"all_items" => __("All sermons", "predikan"),
+				"attributes" => __("Attributes for sermons", "predikan"),
+				"menu_name" => __("Sermons", "predikan"),
+				"filter_items_list" => __("Filter list of sermons", "predikan"),
+				"items_list_navigation" => __("Navigation for list of sermons", "predikan"),
+				"items_list" => __("List of sermons", "predikan"),
+				"item_published" => __("Sermons published", "predikan"),
+				"item_scheduled" => __("Sermon is scheduled for publication", "predikan"),
+				"item_updated" => __("Sermon updated", "predikan")
 			),
 			"public" => true,
 			"exclude_from_search" => true,
@@ -93,26 +93,26 @@ class Predikan {
 		$args = array(
 			"hierarchical" => false,
 			"labels" => array(
-				"name" => "Predikanter",
-				"singular_name" => "Predikant",
-				"add_new" => "Lägg till ny",
-				"add_new_item" => "Lägg till ny predikant",
-				"edit_item" => "Redigera predikant",
-				"update_item" => "Uppdatera predikant",
-				"new_item" => "Ny predikant",
-				"new_item_name" => "Nytt predikantnamn",
-				"view_item" => "Visa predikant",
-				"view_items" => "Visa predikanter",
-				"search_items" => "Sök predikanter",
-				"popular_items" => "Vanliga predikanter",
-				"not_found" => "Inga predikanter hittade",
-				"not_found_in_trash" => "Inga predikanter i papperskorgen",
-				"all_items" => "Alla predikanter",
-				"add_or_remove_items" => "Lägg till eller ta bort predikanter",
-				"menu_name" => "Predikanter",
-				"filter_items_list" => "Filtrera lista över predikanter",
-				"items_list_navigation" => "Navigation för lista över predikanter",
-				"items_list" => "Lista över predikanter"
+				"name" => __("Preachers", "predikan"),
+				"singular_name" => __("Preacher", "predikan"),
+				"add_new" => __("Add new", "predikan"),
+				"add_new_item" => __("Add new preacher", "predikan"),
+				"edit_item" => __("Edit preacher", "predikan"),
+				"update_item" => __("Update preacher", "predikan"),
+				"new_item" => __("New preacher", "predikan"),
+				"new_item_name" => __("New preacher name", "predikan"),
+				"view_item" => __("View preacher", "predikan"),
+				"view_items" => __("View preachers", "predikan"),
+				"search_items" => __("Search preachers", "predikan"),
+				"popular_items" => __("Popular preacher", "predikan"),
+				"not_found" => __("No preachers found", "predikan"),
+				"not_found_in_trash" => __("No preachers found in trash", "predikan"),
+				"all_items" => __("All preacher", "predikan"),
+				"add_or_remove_items" => __("Add or remove preachers", "predikan"),
+				"menu_name" => __("Preachers", "predikan"),
+				"filter_items_list" => __("Filter list of preachers", "predikan"),
+				"items_list_navigation" => __("Navigation for list of preachers", "predikan"),
+				"items_list" => __("List of preachers", "predikan")
 			),
 			"show_ui" => true,
 			"show_admin_column" => true,
@@ -125,7 +125,7 @@ class Predikan {
 		// Add a meta box for the record date of CPT predikan
 		add_meta_box(
 			"predikan-rec-date",
-			"Inspelningsdatum",
+			__("Recording date", "predikan"),
 			array($this, "callback_date_meta_box"),
 			"predikan",
 			"side",
@@ -135,7 +135,7 @@ class Predikan {
 		// Add a meta box for the audio file for CPT predikan
 		add_meta_box(
 			"predikan-audio-file",
-			"Ljudfil",
+			__("Audio file", "predikan"),
 			array($this, "callback_audio_meta_box"),
 			"predikan",
 			"normal",
@@ -150,7 +150,7 @@ class Predikan {
 		if (empty($date)) {$date = date("Y-m-d");}
 		?>
 			<input id="predikan_rec_date" name="predikan_rec_date" type="date" value="<?php echo $date; ?>"/>
-			<p class="howto">Ange predikans inspelningsdatum</p>		
+			<p class="howto"><?php echo __("Enter the sermon's date of recording.", "predikan"); ?></p>		
 		<?php
 	}
 
@@ -159,7 +159,7 @@ class Predikan {
 		$file = get_post_meta($post->ID, "_predikan_audio_file", true);
 		?>
 			<input id="predikan_audio_file" name="predikan_audio_file" type="url" value="<?php echo $file; ?>"/>
-			<p class="howto">Fullständig URL till den ljudfil som ska inkluderas i poddsändningen och visas på webbplatsen.</p>
+			<p class="howto"><?php echo __("Complete URL of the audiofile that will be posted in the podcast and displayed on the website.", "predikan"); ?></p>
 		<?php
 	}
 
@@ -185,8 +185,8 @@ class Predikan {
 	public function add_admin_pages() {
 		// Add link to the podcast admin page
 		add_menu_page(
-			"Poddsändningsinställningar",
-			"Poddsändningsinställningar",
+			__("Podcast settings", "predikan"),
+			__("Podcast settings", "predikan"),
 			"manage_options",
 			"predikan",
 			array($this, "admin_index"),
@@ -199,7 +199,7 @@ class Predikan {
 		// Handle updates
 		if (array_key_exists("podcast_settings_submit", $_POST)) {
 			update_option("predikan_description", $_POST["predikan_description"]);
-			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">Inställningarna har sparats</div>");
+			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">" . __("The settings have been saved", "predikan") . "</div>");
 		}
 
 		// Include the admin page template
@@ -208,7 +208,7 @@ class Predikan {
 
 	public function settings_link($links) {
 		// Add custom settings link to plugin manager
-		$settings_link = "<a href=\"admin.php?page=predikan\">Inställningar</a>";
+		$settings_link = "<a href=\"admin.php?page=predikan\">" . __("Settings", "predikan") . "</a>";
 		array_push($links, $settings_link);
 		return $links;
 	}
@@ -256,12 +256,18 @@ class Predikan {
 	public function episode_table() {
 		// Echo a table of the latest episodes
 		$episodes=$this->episodes_data(30);
-		$table = "<table id=\"predikningar\">";
-		$table .= "<tr><th>Datum</th><th>Predikant</th><th>Ämne</th><th>Lyssna</th></tr>";
+		$table = "<table class=\"predikan-table\">";
+		$table .= sprintf(
+			"<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>",
+			 __("Date", "predikan"),
+			 __("Preacher", "predikan"),
+			 __("Subject", "predikan"),
+			 __("Listen", "predikan")
+		);
 		foreach($episodes as $ep) {
 			$table .= "<tr><td>".$ep["date"]."</td><td>".$ep["speakers_string"]."</td><td>".$ep["title"]."</td><td>";
 			if ($ep["file"] == null) {
-				$table .= "ingen fil tillgänglig";
+				$table .= __("no file available", "predikan");
 			} else {
 				$table .= "<audio controls=\"controls\" preload=\"none\"><source src=\"".$ep["file"]."\" type=\"audio/mpeg\"/></audio>";
 			}
