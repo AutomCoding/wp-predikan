@@ -229,7 +229,7 @@ class Predikan {
 		foreach($episodes as $episode) {
 			// Concatenate all speakers to a single string
 			$speaker_names = array();
-			$speakers = wp_get_post_terms($episode->ID, "speaker");
+			$speakers = wp_get_post_terms($episode->ID, "predikan_speaker");
 			foreach($speakers as $speaker) {
 				array_push($speaker_names, $speaker->name);
 			}
