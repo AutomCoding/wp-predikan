@@ -159,7 +159,9 @@ class Predikan {
 		$file = get_post_meta($post->ID, "_predikan_audio_file", true);
 		?>
 			<input id="predikan_audio_file" name="predikan_audio_file" type="url" value="<?php echo $file; ?>"/>
-			<p class="howto"><?php echo __("Complete URL of the audiofile that will be posted in the podcast and displayed on the website.", "predikan"); ?></p>
+			<p class="howto">
+				<?php echo __("Complete URL of the audiofile that will be posted in the podcast and displayed on the website.", "predikan"); ?>
+			</p>
 		<?php
 	}
 
@@ -199,7 +201,9 @@ class Predikan {
 		// Handle updates
 		if (array_key_exists("podcast_settings_submit", $_POST)) {
 			update_option("predikan_description", $_POST["predikan_description"]);
-			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">" . __("The settings have been saved", "predikan") . "</div>");
+			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">";
+			print(__("The settings have been saved", "predikan"));
+			print("</div>");
 		}
 
 		// Include the admin page template
