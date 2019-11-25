@@ -22,6 +22,10 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 1.1.1 =
+* Correct typos.
+* Minor code fixes (cosmetic).
+
 = 1.1.0 =
 * Add localization support.
 
