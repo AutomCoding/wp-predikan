@@ -4,7 +4,7 @@
  *
  * Plugin Name: Predikan
  * Description: Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
- * Version:     1.0.0
+ * Version:     1.1.0
  * Author:      Filip Bengtsson
  * Author URI:  https://github.com/AutomCoding/
  * License:     GPLv3 or later
