@@ -22,6 +22,9 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 1.2.0 =
+* Bugfix: No speakers in table.
+
 = 1.1.1 =
 * Correct typos.
 * Minor code fixes (cosmetic).
@@ -32,3 +35,13 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 = 1.0.0 =
 * First version with all essential components working.
 * All UI text is in Swedish only.
+
+== Upgrade Notice ==
+= 1.2.0 =
+This patch will fix a bug in the table. The speakers are now displayed correctly.
+
+= 1.1.1 =
+A couple of typos have been corrected in this version.
+
+= 1.1.0 =
+This update will change the plugin language to English and add support for translations.
