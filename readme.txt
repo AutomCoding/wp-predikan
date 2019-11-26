@@ -22,7 +22,8 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
-= NEXT =
+= 1.3.0 =
+* Collapse table into a single column on narrow screens.
 * Help translators understanding the context of strings.
 * Wider input box for the audio URL.
 
@@ -41,6 +42,9 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 * All UI text is in Swedish only.
 
 == Upgrade Notice ==
+= 1.3.0 =
+The table will now be mobile friendly as it collapses into a single column on narrow screens.
+
 = 1.2.0 =
 This patch will fix a bug in the table. The speakers are now displayed correctly.
 
