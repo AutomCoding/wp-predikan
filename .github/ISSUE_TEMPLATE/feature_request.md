@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest an idea for this plugin
 title: ''
-labels: enhancement
+labels: 'enhancement :star2:'
 assignees: ''
 
 ---
