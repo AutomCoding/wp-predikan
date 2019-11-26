@@ -189,7 +189,7 @@ class Predikan {
 		// Add link to the podcast admin page
 		add_menu_page(
 			__("Podcast settings", "predikan"),
-			__("Podcast settings", "predikan"),
+			_x("Podcast settings", "Short text to be used in the admin side panel menu", "predikan"),
 			"manage_options",
 			"predikan",
 			array($this, "admin_index"),
@@ -213,7 +213,7 @@ class Predikan {
 
 	public function settings_link($links) {
 		// Add custom settings link to plugin manager
-		$settings_link = "<a href=\"admin.php?page=predikan\">" . __("Settings", "predikan") . "</a>";
+		$settings_link = "<a href=\"admin.php?page=predikan\">" . _x("Settings", "Link in the plugin manager", "predikan") . "</a>";
 		array_push($links, $settings_link);
 		return $links;
 	}
@@ -264,15 +264,15 @@ class Predikan {
 		$table = "<table class=\"predikan-table\">";
 		$table .= sprintf(
 			"<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>",
-			 __("Date", "predikan"),
-			 __("Preacher", "predikan"),
-			 __("Subject", "predikan"),
-			 __("Listen", "predikan")
+			 _x("Date", "Table header", "predikan"),
+			 _x("Preacher", "Table header", "predikan"),
+			 _x("Subject", "Table header", "predikan"),
+			 _x("Listen", "Table header", "predikan")
 		);
 		foreach($episodes as $ep) {
 			$table .= "<tr><td>".$ep["date"]."</td><td>".$ep["speakers_string"]."</td><td>".$ep["title"]."</td><td>";
 			if ($ep["file"] == null) {
-				$table .= __("no file available", "predikan");
+				$table .= _x("no file available", "Displayed in table instead of audio player", "predikan");
 			} else {
 				$table .= "<audio controls=\"controls\" preload=\"none\"><source src=\"".$ep["file"]."\" type=\"audio/mpeg\"/></audio>";
 			}

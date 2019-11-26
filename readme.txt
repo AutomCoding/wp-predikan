@@ -23,6 +23,7 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 
 == Changelog ==
 = NEXT =
+* Help translators understanding the context of strings.
 * Wider input box for the audio URL.
 
 = 1.2.0 =
