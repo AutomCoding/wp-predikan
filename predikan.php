@@ -30,6 +30,7 @@ class Predikan {
 		add_filter("plugin_action_links_".$this->plugin, array($this, "settings_link"));
 		add_action("save_post", array($this, "date_meta_boxes_save"));
 		add_shortcode("predikan", array($this, "episode_table"));
+		wp_register_script("predikan-table-mobile", plugins_url("/js/mobile-table.js" , __FILE__ ), array("jquery"));
 	}
 
 	public function activate() {
@@ -259,9 +260,13 @@ class Predikan {
 	}
 
 	public function episode_table() {
+		// Enque JavaScript
+		wp_enqueue_script("predikan-table-mobile");
+
 		// Echo a table of the latest episodes
 		$episodes=$this->episodes_data(30);
 		$table = "<table class=\"predikan-table\">";
+		$table .= "<thead>";
 		$table .= sprintf(
 			"<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>",
 			 _x("Date", "Table header", "predikan"),
@@ -269,6 +274,8 @@ class Predikan {
 			 _x("Subject", "Table header", "predikan"),
 			 _x("Listen", "Table header", "predikan")
 		);
+		$table .= "</thead>";
+		$table .= "<tbody>";
 		foreach($episodes as $ep) {
 			$table .= "<tr><td>".$ep["date"]."</td><td>".$ep["speakers_string"]."</td><td>".$ep["title"]."</td><td>";
 			if ($ep["file"] == null) {
@@ -278,6 +285,7 @@ class Predikan {
 			}
 			$table .= "</td></tr>";
 		}
+		$table .= "</tbody>";
 		$table .= "</table>";
 		return $table;
 	}
