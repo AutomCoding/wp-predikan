@@ -106,7 +106,7 @@ class Predikan {
 				"view_item" => __("View preacher", "predikan"),
 				"view_items" => __("View preachers", "predikan"),
 				"search_items" => __("Search preachers", "predikan"),
-				"popular_items" => __("Popular preacher", "predikan"),
+				"popular_items" => __("Popular preachers", "predikan"),
 				"not_found" => __("No preachers found", "predikan"),
 				"not_found_in_trash" => __("No preachers found in trash", "predikan"),
 				"all_items" => __("All preachers", "predikan"),
