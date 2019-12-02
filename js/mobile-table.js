@@ -7,8 +7,11 @@ jQuery(document).ready(function() {
     });
 
     jQuery("table.predikan-table thead").remove();
-    jQuery("table.predikan-table th").css("display", "block");
-    jQuery("table.predikan-table td").css("display", "block");
+    jQuery("table.predikan-table tbody tr").children().css("display", "block");
+    jQuery("table.predikan-table td").toggle();
+
+    jQuery("th.predikan_toggle_hide").click(function() {
+      jQuery(this).siblings().slideToggle();
+    });
   }
 });
-

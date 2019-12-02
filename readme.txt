@@ -4,14 +4,14 @@ Tags: church, podcast
 Requires at least: 5.0
 Tested up to: 5.3
 Requires PHP: 7.0.0
-Stable tag: 1.3.0
+Stable tag: 1.4.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
 Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
 
 == Description ==
-Upload sermons to your church's website as a podcast and include them on any of your pages as a table.
+Upload sermons to your church's website as a podcast and include them on any of your pages as a mobile friendly table.
 
 == Installation ==
 1. Upload the plugin to the `/wp-content/plugins/` directory.
@@ -23,7 +23,9 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
-= NEXT =
+= 1.4.0 =
+* Show only sermon titles in the table on mobile phones when the page is loaded.
+* Add animations for displaying more information in a dropdown on mobile phones.
 * Use title case for the labels and menu items in the admin pages.
 
 = 1.3.0 =
@@ -46,6 +48,9 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 * All UI text is in Swedish only.
 
 == Upgrade Notice ==
+= 1.4.0 =
+The table will now only show sermon titles for mobile users when the page is loaded, and a dropdown will display more when clicked.
+
 = 1.3.0 =
 The table will now be mobile friendly as it collapses into a single column on narrow screens.
 
