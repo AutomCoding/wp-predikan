@@ -4,7 +4,7 @@ Tags: church, podcast
 Requires at least: 5.0
 Tested up to: 5.3
 Requires PHP: 7.0.0
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -23,6 +23,10 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 1.4.1 =
+* Escape translated strings (security related).
+* Add an arrow to the mobile friendly version of the table for better UX.
+
 = 1.4.0 =
 * Show only sermon titles in the table on mobile phones when the page is loaded.
 * Add animations for displaying more information in a dropdown on mobile phones.
@@ -48,6 +52,9 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 * All UI text is in Swedish only.
 
 == Upgrade Notice ==
+= 1.4.1 =
+This version will bring tighter security and be easier to use on mobile phones.
+
 = 1.4.0 =
 The table will now only show sermon titles for mobile users when the page is loaded, and a dropdown will display more when clicked.
 
