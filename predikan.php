@@ -51,26 +51,26 @@ class Predikan {
 		// Register the 'predikan' post type
 		$args = array(
 			"labels" => array(
-				"name" => __("Sermons", "predikan"),
-				"singular_name" => __("Sermon", "predikan"),
-				"add_new" => __("Add New", "predikan"),
-				"add_new_item" => __("Add New Sermon", "predikan"),
-				"edit_item" => __("Edit Sermon", "predikan"),
-				"new_item" => __("New Sermon", "predikan"),
-				"view_item" => __("View Sermon", "predikan"),
-				"view_items" => __("View Sermons", "predikan"),
-				"search_items" => __("Search Sermons", "predikan"),
-				"not_found" => __("No Sermons Found", "predikan"),
-				"not_found_in_trash" => __("No Sermons Found in Trash", "predikan"),
-				"all_items" => __("All Sermons", "predikan"),
-				"attributes" => __("Attributes for Sermons", "predikan"),
-				"menu_name" => __("Sermons", "predikan"),
-				"filter_items_list" => __("Filter List of Sermons", "predikan"),
-				"items_list_navigation" => __("Navigation for List of Sermons", "predikan"),
-				"items_list" => __("List of Sermons", "predikan"),
-				"item_published" => __("Sermons published", "predikan"),
-				"item_scheduled" => __("Sermon is scheduled for publication", "predikan"),
-				"item_updated" => __("Sermon updated", "predikan")
+				"name" => esc_html__("Sermons", "predikan"),
+				"singular_name" => esc_html__("Sermon", "predikan"),
+				"add_new" => esc_html__("Add New", "predikan"),
+				"add_new_item" => esc_html__("Add New Sermon", "predikan"),
+				"edit_item" => esc_html__("Edit Sermon", "predikan"),
+				"new_item" => esc_html__("New Sermon", "predikan"),
+				"view_item" => esc_html__("View Sermon", "predikan"),
+				"view_items" => esc_html__("View Sermons", "predikan"),
+				"search_items" => esc_html__("Search Sermons", "predikan"),
+				"not_found" => esc_html__("No Sermons Found", "predikan"),
+				"not_found_in_trash" => esc_html__("No Sermons Found in Trash", "predikan"),
+				"all_items" => esc_html__("All Sermons", "predikan"),
+				"attributes" => esc_html__("Attributes for Sermons", "predikan"),
+				"menu_name" => esc_html__("Sermons", "predikan"),
+				"filter_items_list" => esc_html__("Filter List of Sermons", "predikan"),
+				"items_list_navigation" => esc_html__("Navigation for List of Sermons", "predikan"),
+				"items_list" => esc_html__("List of Sermons", "predikan"),
+				"item_published" => esc_html__("Sermons published", "predikan"),
+				"item_scheduled" => esc_html__("Sermon is scheduled for publication", "predikan"),
+				"item_updated" => esc_html__("Sermon updated", "predikan")
 			),
 			"public" => true,
 			"exclude_from_search" => true,
@@ -95,26 +95,26 @@ class Predikan {
 		$args = array(
 			"hierarchical" => false,
 			"labels" => array(
-				"name" => __("Preachers", "predikan"),
-				"singular_name" => __("Preacher", "predikan"),
-				"add_new" => __("Add New", "predikan"),
-				"add_new_item" => __("Add New Preacher", "predikan"),
-				"edit_item" => __("Edit Preacher", "predikan"),
-				"update_item" => __("Update Preacher", "predikan"),
-				"new_item" => __("New Preacher", "predikan"),
-				"new_item_name" => __("New Preacher name", "predikan"),
-				"view_item" => __("View Preacher", "predikan"),
-				"view_items" => __("View Preachers", "predikan"),
-				"search_items" => __("Search Preachers", "predikan"),
-				"popular_items" => __("Popular Preachers", "predikan"),
-				"not_found" => __("No Preachers Found", "predikan"),
-				"not_found_in_trash" => __("No Preachers Found in Trash", "predikan"),
-				"all_items" => __("All Preachers", "predikan"),
-				"add_or_remove_items" => __("Add or Remove Preachers", "predikan"),
-				"menu_name" => __("Preachers", "predikan"),
-				"filter_items_list" => __("Filter List of Preachers", "predikan"),
-				"items_list_navigation" => __("Navigation for List of Preachers", "predikan"),
-				"items_list" => __("List of Preachers", "predikan")
+				"name" => esc_html__("Preachers", "predikan"),
+				"singular_name" => esc_html__("Preacher", "predikan"),
+				"add_new" => esc_html__("Add New", "predikan"),
+				"add_new_item" => esc_html__("Add New Preacher", "predikan"),
+				"edit_item" => esc_html__("Edit Preacher", "predikan"),
+				"update_item" => esc_html__("Update Preacher", "predikan"),
+				"new_item" => esc_html__("New Preacher", "predikan"),
+				"new_item_name" => esc_html__("New Preacher name", "predikan"),
+				"view_item" => esc_html__("View Preacher", "predikan"),
+				"view_items" => esc_html__("View Preachers", "predikan"),
+				"search_items" => esc_html__("Search Preachers", "predikan"),
+				"popular_items" => esc_html__("Popular Preachers", "predikan"),
+				"not_found" => esc_html__("No Preachers Found", "predikan"),
+				"not_found_in_trash" => esc_html__("No Preachers Found in Trash", "predikan"),
+				"all_items" => esc_html__("All Preachers", "predikan"),
+				"add_or_remove_items" => esc_html__("Add or Remove Preachers", "predikan"),
+				"menu_name" => esc_html__("Preachers", "predikan"),
+				"filter_items_list" => esc_html__("Filter List of Preachers", "predikan"),
+				"items_list_navigation" => esc_html__("Navigation for List of Preachers", "predikan"),
+				"items_list" => esc_html__("List of Preachers", "predikan")
 			),
 			"show_ui" => true,
 			"show_admin_column" => true,
@@ -127,7 +127,7 @@ class Predikan {
 		// Add a meta box for the record date of CPT predikan
 		add_meta_box(
 			"predikan-rec-date",
-			__("Recording date", "predikan"),
+			esc_html__("Recording date", "predikan"),
 			array($this, "callback_date_meta_box"),
 			"predikan",
 			"side",
@@ -137,7 +137,7 @@ class Predikan {
 		// Add a meta box for the audio file for CPT predikan
 		add_meta_box(
 			"predikan-audio-file",
-			__("Audio file", "predikan"),
+			esc_html__("Audio file", "predikan"),
 			array($this, "callback_audio_meta_box"),
 			"predikan",
 			"normal",
@@ -152,7 +152,7 @@ class Predikan {
 		if (empty($date)) {$date = date("Y-m-d");}
 		?>
 			<input id="predikan_rec_date" name="predikan_rec_date" type="date" value="<?php echo $date; ?>"/>
-			<p class="howto"><?php echo __("Enter the sermon's date of recording.", "predikan"); ?></p>		
+			<p class="howto"><?php echo esc_html__("Enter the sermon's date of recording.", "predikan"); ?></p>		
 		<?php
 	}
 
@@ -162,7 +162,7 @@ class Predikan {
 		?>
 			<input id="predikan_audio_file" name="predikan_audio_file" style="width:100%;" type="url" value="<?php echo $file; ?>"/>
 			<p class="howto">
-				<?php echo __("Complete URL of the audiofile that will be posted in the podcast and displayed on the website.", "predikan"); ?>
+				<?php echo esc_html__("Complete URL of the audiofile that will be posted in the podcast and displayed on the website.", "predikan"); ?>
 			</p>
 		<?php
 	}
@@ -189,8 +189,8 @@ class Predikan {
 	public function add_admin_pages() {
 		// Add link to the podcast admin page
 		add_menu_page(
-			__("Podcast settings", "predikan"),
-			_x("Podcast settings", "Short text to be used in the admin side panel menu", "predikan"),
+			esc_html__("Podcast settings", "predikan"),
+			esc_html_x("Podcast settings", "Short text to be used in the admin side panel menu", "predikan"),
 			"manage_options",
 			"predikan",
 			array($this, "admin_index"),
@@ -203,9 +203,9 @@ class Predikan {
 		// Handle updates
 		if (array_key_exists("podcast_settings_submit", $_POST)) {
 			update_option("predikan_description", $_POST["predikan_description"]);
-			print("<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">");
-			print(__("The settings have been saved", "predikan"));
-			print("</div>");
+			echo "<div id=\"setting-error-settings_updated\" class=\"updated settings-error notice is-dismissible\">";
+			esc_html_e("The settings have been saved", "predikan");
+			echo "</div>";
 		}
 
 		// Include the admin page template
@@ -214,7 +214,7 @@ class Predikan {
 
 	public function settings_link($links) {
 		// Add custom settings link to plugin manager
-		$settings_link = "<a href=\"admin.php?page=predikan\">" . _x("Settings", "Link in the plugin manager", "predikan") . "</a>";
+		$settings_link = "<a href=\"admin.php?page=predikan\">" . esc_html_x("Settings", "Link in the plugin manager", "predikan") . "</a>";
 		array_push($links, $settings_link);
 		return $links;
 	}
@@ -269,17 +269,17 @@ class Predikan {
 		$table .= "<thead>";
 		$table .= sprintf(
 			"<tr><th>%s</th><th>%s</th><th>%s</th><th>%s</th></tr>",
-			 _x("Date", "Table header", "predikan"),
-			 _x("Preacher", "Table header", "predikan"),
-			 _x("Subject", "Table header", "predikan"),
-			 _x("Listen", "Table header", "predikan")
+			 esc_html_x("Date", "Table header", "predikan"),
+			 esc_html_x("Preacher", "Table header", "predikan"),
+			 esc_html_x("Subject", "Table header", "predikan"),
+			 esc_html_x("Listen", "Table header", "predikan")
 		);
 		$table .= "</thead>";
 		$table .= "<tbody>";
 		foreach($episodes as $ep) {
 			$table .= "<tr><td>".$ep["date"]."</td><td>".$ep["speakers_string"]."</td><td>".$ep["title"]."</td><td>";
 			if ($ep["file"] == null) {
-				$table .= _x("no file available", "Displayed in table instead of audio player", "predikan");
+				$table .= esc_html_x("no file available", "Displayed in table instead of audio player", "predikan");
 			} else {
 				$table .= "<audio controls=\"controls\" preload=\"none\"><source src=\"".$ep["file"]."\" type=\"audio/mpeg\"/></audio>";
 			}
