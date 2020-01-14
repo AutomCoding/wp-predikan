@@ -23,6 +23,9 @@ Upload sermons to your church's website as a podcast and include them on any of 
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= next =
+* Rewrite to follow WordPress's coding standard.
+
 = 1.4.1 =
 * Escape translated strings (security related).
 * Add an arrow to the mobile friendly version of the table for better UX.
