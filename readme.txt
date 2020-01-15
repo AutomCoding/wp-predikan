@@ -4,7 +4,7 @@ Tags: church, podcast
 Requires at least: 5.0
 Tested up to: 5.3.2
 Requires PHP: 7.0.0
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,52 +24,11 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
-= next =
+= 1.4.2 =
 * Rewrite to follow WordPress's coding standard.
 
-= 1.4.1 =
-* Escape translated strings (security related).
-* Add an arrow to the mobile friendly version of the table for better UX.
-
-= 1.4.0 =
-* Show only sermon titles in the table on mobile phones when the page is loaded.
-* Add animations for displaying more information in a dropdown on mobile phones.
-* Use title case for the labels and menu items in the admin pages.
-
-= 1.3.0 =
-* Collapse table into a single column on narrow screens.
-* Help translators understanding the context of strings.
-* Wider input box for the audio URL.
-
-= 1.2.0 =
-* Bugfix: No speakers in table.
-
-= 1.1.1 =
-* Correct typos.
-* Minor code fixes (cosmetic).
-
-= 1.1.0 =
-* Add localization support.
-
-= 1.0.0 =
-* First version with all essential components working.
-* All UI text is in Swedish only.
+[Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
 == Upgrade Notice ==
-= 1.4.1 =
-This version will bring tighter security and be easier to use on mobile phones.
-
-= 1.4.0 =
-The table will now only show sermon titles for mobile users when the page is loaded, and a dropdown will display more when clicked.
-
-= 1.3.0 =
-The table will now be mobile friendly as it collapses into a single column on narrow screens.
-
-= 1.2.0 =
-This patch will fix a bug in the table. The speakers are now displayed correctly.
-
-= 1.1.1 =
-A couple of typos have been corrected in this version.
-
-= 1.1.0 =
-This update will change the plugin language to English and add support for translations.
+= 1.4.2 =
+This release makes the plugin adhere to the WordPress coding standards.
