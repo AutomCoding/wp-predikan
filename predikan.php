@@ -161,10 +161,17 @@ class Predikan {
 		// Callback for meta box for the audio file for CPT predikan
 		$file = get_post_meta($post->ID, '_predikan_audio_file', true );
 		?>
+			<audio id="predikan_audio_preview" preload="none" style="width: 100%;" controls="controls" src="<?php echo $file; ?>"></audio>
+			<br />
 			<input id="predikan_audio_file" name="predikan_audio_file" style="width: 100%;" type="url" value="<?php echo $file; ?>"/>
 			<p class="howto">
 				<?php echo esc_html__( 'Complete URL of the audiofile that will be posted in the podcast and displayed on the website.', 'predikan' ); ?>
 			</p>
+			<script>
+				jQuery( '#predikan_audio_file' ).change( function() {
+					jQuery( '#predikan_audio_preview' ).attr( 'src' , jQuery( '#predikan_audio_file' ).val() );
+				});
+			</script>
 		<?php
 	}
 
