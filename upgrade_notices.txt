@@ -1,3 +1,6 @@
+= 1.5.0 =
+This release will introduce an “preview” for the audio file.
+
 = 1.4.1 =
 This version will bring tighter security and be easier to use on mobile phones.
 
