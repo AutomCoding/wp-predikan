@@ -26,9 +26,10 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 == Changelog ==
 = 1.4.2 =
 * Rewrite to follow WordPress's coding standard.
+* Add an audio “preview” to the sermon editing page.
 
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
 == Upgrade Notice ==
 = 1.4.2 =
-This release makes the plugin adhere to the WordPress coding standards.
+This release will introduce an “preview” for the audio file.
