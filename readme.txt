@@ -4,7 +4,7 @@ Tags: church, podcast, sermon
 Requires at least: 5.0
 Tested up to: 5.3.2
 Requires PHP: 7.0.0
-Stable tag: 1.5.0
+Stable tag: 1.5.1
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,6 +24,9 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 1.5.1 =
+* Bugix: Mobile friendly table not working.
+
 = 1.5.0 =
 * Rewrite to follow WordPress's coding standard.
 * Add an audio “preview” to the sermon editing page.
@@ -31,5 +34,5 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
 == Upgrade Notice ==
-= 1.5.0 =
-This release will introduce an “preview” for the audio file.
+= 1.5.1 =
+Bugfix for the mobile friendly table.

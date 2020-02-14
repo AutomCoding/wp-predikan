@@ -5,7 +5,7 @@
  * Plugin Name: Predikan
  * Plugin URI:  https://github.com/AutomCoding/wp-predikan/
  * Description: Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
- * Version:     1.5.0
+ * Version:     1.5.1
  * Author:      Filip Bengtsson
  * Author URI:  https://github.com/AutomCoding/
  * License:     GPLv3 or later
@@ -30,7 +30,6 @@ class Predikan {
 		add_filter( 'plugin_action_links_' . $this->plugin, array( $this, 'settings_link' ) );
 		add_action( 'save_post', array( $this, 'date_meta_boxes_save') );
 		add_shortcode( 'predikan', array( $this, 'episode_table' ) );
-		wp_register_script( 'predikan-table-mobile', plugins_url( '/js/mobile-table.js' , __FILE__ ), array( 'jquery ') );
 	}
 
 	public function activate() {
@@ -269,7 +268,7 @@ class Predikan {
 
 	public function episode_table() {
 		// Enque JavaScript
-		wp_enqueue_script( 'predikan-table-mobile' );
+		wp_enqueue_script( 'predikan-table-mobile', plugins_url( '/js/mobile-table.js' , __FILE__ ), array( 'jquery' ) );
 
 		// Echo a table of the latest episodes
 		$episodes = $this->episodes_data( 30 );

@@ -1,3 +1,6 @@
+= 1.5.1 =
+Bugfix for the mobile friendly table.
+
 = 1.5.0 =
 This release will introduce an “preview” for the audio file.
 
