@@ -7,7 +7,7 @@
  * Description: Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
  * Version:     1.5.1
  * Author:      Filip Bengtsson
- * Author URI:  https://github.com/AutomCoding/
+ * Author URI:  https://autom.zone/
  * License:     GPLv3 or later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain: predikan
