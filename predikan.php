@@ -253,7 +253,7 @@ class Predikan {
 			// Append episode data to array
 			array_push( $data, array(
 				'unix_time'       => $unix_time,
-				'date'            => date_i18n( get_option( 'date_format' ), $unix_time ),
+				'date'            => wp_date( get_option( 'date_format' ), $unix_time ),
 				'title'           => $episode->post_title,
 				'speakers'        => $speaker_names,
 				'speakers_string' => implode( ', ', $speaker_names ),
@@ -314,7 +314,7 @@ function predikan_modify_feed_content( $raw_content ) {
 
 		$date = get_post_meta( $id, '_predikan_rec_date', true );
 		$unix_time = date_create_from_format( 'Y-m-d', $date )->getTimestamp();
-		$date = date_i18n( get_option( 'date_format' ), $unix_time );
+		$date = wp_date( get_option( 'date_format' ), $unix_time );
 
 		$speaker_names = array();
 		$speakers = wp_get_post_terms( $id, 'predikan_speaker' );
