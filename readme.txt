@@ -1,7 +1,7 @@
 === Predikan ===
 Contributors: automcoding
 Tags: church, podcast, sermon
-Requires at least: 5.0
+Requires at least: 5.3.0
 Tested up to: 5.3.2
 Requires PHP: 7.0.0
 Stable tag: 1.5.1
