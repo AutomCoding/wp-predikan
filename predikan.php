@@ -24,11 +24,11 @@ class Predikan {
 
 	public function register() {
 		add_action( 'init', array( $this, 'custom_post_type' ) );
-		add_action( 'init', array($this, 'custom_taxonomy' ) );
-		add_action( 'edit_form_top', array($this, 'add_predikan_meta_boxes' ) );
+		add_action( 'init', array( $this, 'custom_taxonomy' ) );
+		add_action( 'edit_form_top', array( $this, 'add_predikan_meta_boxes' ) );
 		add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
 		add_filter( 'plugin_action_links_' . $this->plugin, array( $this, 'settings_link' ) );
-		add_action( 'save_post', array( $this, 'date_meta_boxes_save') );
+		add_action( 'save_post', array( $this, 'date_meta_boxes_save' ) );
 		add_shortcode( 'predikan', array( $this, 'episode_table' ) );
 	}
 
@@ -110,7 +110,7 @@ class Predikan {
 				'all_items'             => esc_html__( 'All Preachers', 'predikan' ),
 				'add_or_remove_items'   => esc_html__( 'Add or Remove Preachers', 'predikan' ),
 				'menu_name'             => esc_html__( 'Preachers', 'predikan' ),
-				'filter_items_list'     => esc_html__( 'Filter List of Preachers', 'predikan '),
+				'filter_items_list'     => esc_html__( 'Filter List of Preachers', 'predikan' ),
 				'items_list_navigation' => esc_html__( 'Navigation for List of Preachers', 'predikan' ),
 				'items_list'            => esc_html__( 'List of Preachers', 'predikan' )
 			),
@@ -152,13 +152,13 @@ class Predikan {
 		}
 		?>
 			<input id="predikan_rec_date" name="predikan_rec_date" type="date" value="<?php echo $date; ?>"/>
-			<p class="howto"><?php echo esc_html__( "Enter the sermon's date of recording.", 'predikan'); ?></p>		
+			<p class="howto"><?php echo esc_html__( "Enter the sermon's date of recording.", 'predikan' ); ?></p>		
 		<?php
 	}
 
 	public function callback_audio_meta_box( $post ) {
 		// Callback for meta box for the audio file for CPT predikan
-		$file = get_post_meta($post->ID, '_predikan_audio_file', true );
+		$file = get_post_meta( $post->ID, '_predikan_audio_file', true );
 		?>
 			<audio id="predikan_audio_preview" preload="none" style="width: 100%;" controls="controls" src="<?php echo $file; ?>"></audio>
 			<br />
@@ -303,7 +303,7 @@ $predikan = new Predikan();
 $predikan->register();
 
 // Register event hooks for Wordpress
-register_activation_hook( __FILE__, array( $predikan, 'activate') );
+register_activation_hook( __FILE__, array( $predikan, 'activate' ) );
 register_deactivation_hook( __FILE__, array( $predikan, 'deactivate' ) );
 
 // Add custom feed content
