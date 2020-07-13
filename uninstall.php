@@ -14,7 +14,7 @@ $predikan_speakers = get_terms( array(
 	'hide_empty' => false
 ) );
 foreach ( $predikan_speakers as $predikan_speaker ) {
-	wp_delete_term( $predikan_speaker->term_id, 'predikan_speaker' );
+	wp_delete_term( $predikan_speaker->term_id, $predikan_speaker->taxonomy );
 }
 
 // Remove settings
