@@ -24,6 +24,10 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 1.5.2 =
+* Bugfix: Data remained in database when the plugin was uninstalled.
+* Code cleanup (style and replacing function that will be removed in future versions of WordPress).
+
 = 1.5.1 =
 * Bugix: Mobile friendly table not working.
 
@@ -34,5 +38,5 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
 == Upgrade Notice ==
-= 1.5.1 =
-Bugfix for the mobile friendly table.
+= 1.5.2 =
+All data will now be removed when the plugn is uninstalled.
