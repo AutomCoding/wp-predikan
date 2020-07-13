@@ -6,7 +6,7 @@ $predikan_episodes = get_posts( array(
 	'numberposts' => -1
 ) );
 foreach ( $predikan_episodes as $predikan_episode ) {
-	wp_delete_post( $predikan_episode, true );
+	wp_delete_post( $predikan_episode->ID, true );
 }
 
 $predikan_speakers = get_terms( array(
@@ -14,7 +14,7 @@ $predikan_speakers = get_terms( array(
 	'hide_empty' => false
 ) );
 foreach ( $predikan_speakers as $predikan_speaker ) {
-	wp_delete_term( $predikan_speaker, 'predikan_speaker' );
+	wp_delete_term( $predikan_speaker->term_id, 'predikan_speaker' );
 }
 
 // Remove settings
