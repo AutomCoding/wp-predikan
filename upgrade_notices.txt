@@ -1,3 +1,6 @@
+= 1.5.2 =
+All data will now be removed when the plugn is uninstalled.
+
 = 1.5.1 =
 Bugfix for the mobile friendly table.
 

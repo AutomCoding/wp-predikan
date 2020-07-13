@@ -1,3 +1,7 @@
+= 1.5.2 =
+* Bugfix: Data remained in database when the plugin was uninstalled.
+* Code cleanup (style and replacing function that will be removed in future versions of WordPress).
+
 = 1.5.1 =
 * Bugix: Mobile friendly table not working.
 
