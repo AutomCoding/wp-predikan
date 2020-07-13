@@ -9,12 +9,12 @@ foreach ( $predikan_episodes as $predikan_episode ) {
 	wp_delete_post( $predikan_episode, true );
 }
 
-$predikan_speakers = get_posts( array(
-	'post_type'   => 'predikan',
-	'numberposts' => -1
+$predikan_speakers = get_terms( array(
+	'taxonomy'   => 'predikan_speaker',
+	'hide_empty' => false
 ) );
 foreach ( $predikan_speakers as $predikan_speaker ) {
-	wp_delete_post( $predikan_speaker, true );
+	wp_delete_term( $predikan_speaker, 'predikan_speaker' );
 }
 
 // Remove settings
