@@ -195,14 +195,12 @@ class Predikan {
 
 	public function add_admin_pages() {
 		// Add link to the podcast admin page
-		add_menu_page(
+		add_options_page(
 			esc_html__( 'Podcast settings', 'predikan' ),
 			esc_html_x( 'Podcast settings', 'Short text to be used in the admin side panel menu', 'predikan' ),
 			'manage_options',
-			'predikan',
-			array( $this, 'admin_index' ),
-			'dashicons-microphone',
-			null
+			'predikan-settings',
+			array( $this, 'admin_index' )
 		);
 	}
 
