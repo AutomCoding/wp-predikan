@@ -178,36 +178,37 @@ class Predikan {
 		// Save data from meta boxes
 		$is_autosave = wp_is_post_autosave( $post_id );
 		$is_revision = wp_is_post_revision( $post_id );
-		$is_valid_nonce = ( isset( $_POST['predikan_nonce'] ) && wp_verify_nonce( $_POST['predikan_nonce'], $this->plugin ) ) ? 'true' : 'false';
+		$is_valid_nonce = ( isset( $_POST[ 'predikan_nonce' ] ) && wp_verify_nonce( $_POST[ 'predikan_nonce' ], $this->plugin ) ) ? 'true' : 'false';
 
 		// Exit function if auto, rev or invalid
 		if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
 			return;
 		}
-		if ( isset( $_POST['predikan_rec_date'] ) ) {
-			update_post_meta( $post_id, '_predikan_rec_date', sanitize_text_field( $_POST['predikan_rec_date'] ) );
+		if ( isset( $_POST[ 'predikan_rec_date' ] ) ) {
+			update_post_meta( $post_id, '_predikan_rec_date', sanitize_text_field( $_POST[ 'predikan_rec_date' ] ) );
 		}
-		if ( isset( $_POST['predikan_audio_file'] ) ) {
-			update_post_meta( $post_id, '_predikan_audio_file', sanitize_text_field( $_POST['predikan_audio_file'] ) );
-			do_enclose( sanitize_text_field( $_POST['predikan_audio_file'] ), $post_id );
+		if ( isset( $_POST[ 'predikan_audio_file' ] ) ) {
+			update_post_meta( $post_id, '_predikan_audio_file', sanitize_text_field( $_POST[ 'predikan_audio_file' ] ) );
+			do_enclose( sanitize_text_field( $_POST[ 'predikan_audio_file' ] ), $post_id );
 		}
 	}
 
 	public function add_admin_pages() {
-		// Add link to the podcast admin page
+		// Add link to the plugin's admin page
 		add_options_page(
-			esc_html__( 'Podcast settings', 'predikan' ),
-			esc_html_x( 'Podcast settings', 'Short text to be used in the admin side panel menu', 'predikan' ),
+			esc_html__( 'Sermon and podcast settings', 'predikan' ),
+			esc_html_x( 'Sermons & podcast', 'Short text for admin menu', 'predikan' ),
 			'manage_options',
 			'predikan-settings',
-			array( $this, 'admin_index' )
+			array( $this, 'admin_page' )
 		);
 	}
 
-	public function admin_index() {
+	public function admin_page() {
 		// Handle updates
 		if ( array_key_exists( 'podcast_settings_submit', $_POST ) ) {
-			update_option( 'predikan_description', $_POST['predikan_description'] );
+			update_option( 'predikan_link_sermon', ( $_POST[ 'predikan_link_sermon' ] == 'Yes' ) ? 'Yes' : 'No' );
+			update_option( 'predikan_description', $_POST[ 'predikan_description' ] );
 			echo '<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">';
 			esc_html_e( 'The settings have been saved', 'predikan' );
 			echo '</div>';
@@ -253,13 +254,14 @@ class Predikan {
 				'unix_time'       => $unix_time,
 				'date'            => wp_date( get_option( 'date_format' ), $unix_time ),
 				'title'           => $episode->post_title,
+				'permalink'       => get_post_permalink( $episode),
 				'speakers'        => $speaker_names,
 				'speakers_string' => implode( ', ', $speaker_names ),
 				'file'            => get_post_meta( $episode->ID, '_predikan_audio_file', true )
 			) );
 		}
 		usort( $data, function( $a, $b ) {
-			return $b['unix_time'] <=> $a['unix_time'];
+			return $b[ 'unix_time' ] <=> $a[ 'unix_time' ];
 		} );
 		return $data;
 	}
@@ -267,6 +269,9 @@ class Predikan {
 	public function episode_table() {
 		// Enque JavaScript
 		wp_enqueue_script( 'predikan-table-mobile', plugins_url( '/js/mobile-table.js' , __FILE__ ), array( 'jquery' ) );
+
+		// Fetch settings
+		$link_sermon = ( get_option ( 'predikan_link_sermon', 'No' ) == 'Yes' );
 
 		// Echo a table of the latest episodes
 		$episodes = $this->episodes_data( 30 );
@@ -282,11 +287,13 @@ class Predikan {
 		$table .= "</thead>";
 		$table .= "<tbody>";
 		foreach( $episodes as $ep ) {
-			$table .= '<tr><td>' . $ep['date'] . '</td><td>' . $ep['speakers_string'] . '</td><td>' . $ep['title'] . '</td><td>';
-			if ( $ep['file'] == null ) {
+			$table .= '<tr><td>' . $ep[ 'date' ] . '</td><td>' . $ep[ 'speakers_string' ] . '</td><td>';
+			$table .= ( $link_sermon ) ? '<a href="' . $ep[ 'permalink' ] . '">' . $ep[ 'title' ] . '</a>' : $ep[ 'title' ];
+			$table .= '</td><td>';
+			if ( $ep[ 'file' ] == null ) {
 				$table .= esc_html_x( 'no file available', 'Displayed in table instead of audio player', 'predikan' );
 			} else {
-				$table .= '<audio controls="controls" preload="none"><source src="' . $ep['file'] . '" type="audio/mpeg"/></audio>';
+				$table .= '<audio controls="controls" preload="none"><source src="' . $ep[ 'file' ] . '" type="audio/mpeg"/></audio>';
 			}
 			$table .= '</td></tr>';
 		}

@@ -19,3 +19,4 @@ foreach ( $predikan_speakers as $predikan_speaker ) {
 
 // Remove settings
 delete_option( 'predikan_description' );
+delete_option( 'predikan_link_sermon' );

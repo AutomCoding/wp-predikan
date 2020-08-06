@@ -4,7 +4,7 @@ Tags: church, podcast, sermon
 Requires at least: 5.3.0
 Tested up to: 5.4.2
 Requires PHP: 7.0.0
-Stable tag: 1.5.2
+Stable tag: 1.6.0
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
@@ -24,22 +24,12 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
-= NEXT =
+= 1.6.0 =
+* Add ability to link to the sermon’s page from the table.
 * Move configuration page to Settings in the admin menu.
-
-= 1.5.2 =
-* Bugfix: Data remained in database when the plugin was uninstalled.
-* Code cleanup (style and replacing function that will be removed in future versions of WordPress).
-
-= 1.5.1 =
-* Bugix: Mobile friendly table not working.
-
-= 1.5.0 =
-* Rewrite to follow WordPress's coding standard.
-* Add an audio “preview” to the sermon editing page.
 
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
 == Upgrade Notice ==
-= 1.5.2 =
-All data will now be removed when the plugn is uninstalled.
+= 1.6.0 =
+Now, you can link to the sermons’ pages from the table.
