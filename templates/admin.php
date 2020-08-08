@@ -8,7 +8,7 @@
 	<form method="post" action="">
 		<h2><?php esc_html_e( 'Sermon table', 'predikan' ); ?></h2>
 		<input type="checkbox" id="predikan_link_sermon" name="predikan_link_sermon" value="Yes" <?php if ( get_option( 'predikan_link_sermon', '' ) == 'Yes' ) print 'checked '; ?>/>
-		<label for="predikan_link_sermon">Link to the sermon’s page</label>
+		<label for="predikan_link_sermon"><?php esc_html_e( 'Link to the sermon’s page', 'predikan' ); ?></label>
 
 		<h2><?php esc_html_e( 'Podcast', 'predikan' ); ?></h2>
 		<label for="predikan_description"><?php esc_html_e( 'Channel description', 'predikan' ); ?></label>
