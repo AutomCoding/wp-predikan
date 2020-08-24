@@ -152,7 +152,7 @@ class Predikan {
 		}
 		?>
 			<input id="predikan_rec_date" name="predikan_rec_date" type="date" value="<?php echo $date; ?>"/>
-			<p class="howto"><?php echo esc_html__( "Enter the sermon's date of recording.", 'predikan' ); ?></p>		
+			<p class="howto"><?php echo esc_html__( 'Enter the sermon’s date of recording.', 'predikan' ); ?></p>		
 		<?php
 	}
 
@@ -169,7 +169,7 @@ class Predikan {
 			<script>
 				jQuery( '#predikan_audio_file' ).change( function() {
 					jQuery( '#predikan_audio_preview' ).attr( 'src' , jQuery( '#predikan_audio_file' ).val() );
-				});
+				} );
 			</script>
 		<?php
 	}
@@ -221,7 +221,7 @@ class Predikan {
 	public function settings_link( $links ) {
 		// Add custom settings link to plugin manager
 		$settings_link = '<a href="admin.php?page=predikan">' . esc_html_x( 'Settings', 'Link in the plugin manager', 'predikan' ) . '</a>';
-		array_push($links, $settings_link);
+		array_push( $links, $settings_link );
 		return $links;
 	}
 
@@ -284,8 +284,8 @@ class Predikan {
 			 esc_html_x( 'Subject', 'Table header', 'predikan' ),
 			 esc_html_x( 'Listen', 'Table header', 'predikan' )
 		);
-		$table .= "</thead>";
-		$table .= "<tbody>";
+		$table .= '</thead>';
+		$table .= '<tbody>';
 		foreach( $episodes as $ep ) {
 			$table .= '<tr><td>' . $ep[ 'date' ] . '</td><td>' . $ep[ 'speakers_string' ] . '</td><td>';
 			$table .= ( $link_sermon ) ? '<a href="' . $ep[ 'permalink' ] . '">' . $ep[ 'title' ] . '</a>' : $ep[ 'title' ];

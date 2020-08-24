@@ -4,10 +4,10 @@ jQuery( document ).ready( function() {
 			var current_row = jQuery( 'table.predikan-table tbody tr' ).eq( index );
 			current_row.prepend(
 				'<th class="predikan_toggle_hide">' +
-				this.cells[2].innerText +
+				this.cells[ 2 ].innerText +
 				'<span style="float: right;">▼</span></th>' );
 			current_row.find( 'td' ).slice( 2, 3 ).remove();
-		});
+		} );
 
 		jQuery( 'table.predikan-table thead' ).remove();
 		jQuery( 'table.predikan-table tbody tr' ).children().css( 'display', 'block' );
@@ -21,7 +21,7 @@ jQuery( document ).ready( function() {
 				} else {
 					iconSpan.text( '▲' );
 				}
-			});
-		});
+			} );
+		} );
 	}
-});
+} );
