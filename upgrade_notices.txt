@@ -1,3 +1,6 @@
+= 1.6.1 =
+This is a fix for a security bug.
+
 = 1.6.0 =
 Now, you can link to the sermons’ pages from the table.
 

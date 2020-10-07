@@ -1,3 +1,6 @@
+= 1.6.1 =
+* Security related bug fixed.
+
 = 1.6.0 =
 * Add ability to link to the sermon’s page from the table.
 * Move configuration page to Settings in the admin menu.

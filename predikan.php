@@ -5,7 +5,7 @@
  * Plugin Name: Predikan
  * Plugin URI:  https://github.com/AutomCoding/wp-predikan/
  * Description: Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
- * Version:     1.6.0
+ * Version:     1.6.1
  * Author:      Filip Bengtsson
  * Author URI:  https://autom.zone/
  * License:     GPLv3 or later
@@ -178,7 +178,7 @@ class Predikan {
 		// Save data from meta boxes
 		$is_autosave = wp_is_post_autosave( $post_id );
 		$is_revision = wp_is_post_revision( $post_id );
-		$is_valid_nonce = ( isset( $_POST[ 'predikan_nonce' ] ) && wp_verify_nonce( $_POST[ 'predikan_nonce' ], $this->plugin ) ) ? 'true' : 'false';
+		$is_valid_nonce = ( isset( $_POST[ 'predikan_nonce' ] ) && wp_verify_nonce( $_POST[ 'predikan_nonce' ], $this->plugin ) ) ? true : false;
 
 		// Exit function if auto, rev or invalid
 		if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
