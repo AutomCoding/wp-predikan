@@ -220,7 +220,7 @@ class Predikan {
 
 	public function settings_link( $links ) {
 		// Add custom settings link to plugin manager
-		$settings_link = '<a href="admin.php?page=predikan">' . esc_html_x( 'Settings', 'Link in the plugin manager', 'predikan' ) . '</a>';
+		$settings_link = '<a href="options-general.php?page=predikan-settings">' . esc_html_x( 'Settings', 'Link in the plugin manager', 'predikan' ) . '</a>';
 		array_push( $links, $settings_link );
 		return $links;
 	}

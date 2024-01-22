@@ -24,6 +24,9 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= NEXT =
+* Fix settings link in the plugin manager.
+
 = 1.6.2 =
 * Add banner image for the plugin repository.
 * Test with the latest WordPress version.
