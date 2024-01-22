@@ -8,10 +8,10 @@ Stable tag: __STABLE_TAG__
 License: GPLv3 or later
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
+Upload sermons to your church’s website as a podcast and include them, in a table, on any of your pages.
 
 == Description ==
-Upload sermons to your church's website as a podcast and include them on any of your pages as a mobile friendly table.
+Upload sermons to your church’s website as a podcast and include them on any of your pages as a mobile friendly table.
 
 == Installation ==
 The plugin can be installed through the WordPress plugin manager.

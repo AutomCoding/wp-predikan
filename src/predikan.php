@@ -4,7 +4,7 @@
  *
  * Plugin Name: Predikan
  * Plugin URI:  https://github.com/AutomCoding/wp-predikan/
- * Description: Upload sermons to your church's website as a podcast and include them, in a table, on any of your pages.
+ * Description: Upload sermons to your church’s website as a podcast and include them, in a table, on any of your pages.
  * Version:     __STABLE_TAG__
  * Author:      Filip Bengtsson
  * Author URI:  https://autom.zone/
