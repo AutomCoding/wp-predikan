@@ -26,7 +26,7 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 == Changelog ==
 = 1.6.2 =
 * Add banner image for the plugin repository.
-* Test with the latest WordPress verion.
+* Test with the latest WordPress version.
 
 = 1.6.1 =
 * Security related bug fixed.
