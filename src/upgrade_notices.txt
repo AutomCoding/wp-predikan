@@ -1,3 +1,6 @@
+= 1.6.2 =
+Testing with the latest WordPress version and plugin directory artwork.
+
 = 1.6.1 =
 This is a fix for a security bug.
 
