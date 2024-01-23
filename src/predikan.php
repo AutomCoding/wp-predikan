@@ -25,16 +25,20 @@ class Predikan {
 	public function register() {
 		add_action( 'init', array( $this, 'custom_post_type' ) );
 		add_action( 'init', array( $this, 'custom_taxonomy' ) );
+		add_action( 'init', array( $this, 'custom_feed' ) );
 		add_action( 'edit_form_top', array( $this, 'add_predikan_meta_boxes' ) );
 		add_action( 'admin_menu', array( $this, 'add_admin_pages' ) );
 		add_filter( 'plugin_action_links_' . $this->plugin, array( $this, 'settings_link' ) );
 		add_action( 'save_post', array( $this, 'date_meta_boxes_save' ) );
 		add_shortcode( 'predikan', array( $this, 'episode_table' ) );
+		add_shortcode( 'predikan-feed', array( $this, 'feed_link' ) );
 	}
 
 	public function activate() {
-		// Run when activating plugin from Wordpress
+		// Run when activating plugin from WordPress
 		$this->custom_post_type();
+		$this->custom_taxonomy();
+		$this->custom_feed();
 		flush_rewrite_rules();
 
 		// Set podcast description to equal website tagline if not already set
@@ -42,7 +46,7 @@ class Predikan {
 	}
 
 	public function deactivate() {
-		// Run when deactivating plugin from Wordpress
+		// Run when deactivating plugin from WordPress
 		flush_rewrite_rules();
 	}
 
@@ -300,6 +304,23 @@ class Predikan {
 		$table .= '</tbody>';
 		$table .= '</table>';
 		return $table;
+	}
+
+	public function custom_feed() {
+		// Register RSS feed for podcast
+		add_feed( 'predikan-podcast', array( $this, 'render_custom_feed' ) );
+	}
+
+	public function render_custom_feed() {
+		// Render RSS podcast feed
+		header( 'Content-Type: application/rss+xml' );
+		require_once plugin_dir_path( __FILE__ ) . 'templates/predikan-podcast.php';
+	}
+
+	public function feed_link() {
+		// Return link to the podcast feed
+		$link = site_url( '/feed/predikan-podcast/' );
+		return '<a href="' . $link . '">anchor text</a>';
 	}
 }
 
