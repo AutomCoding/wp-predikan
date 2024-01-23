@@ -317,10 +317,11 @@ class Predikan {
 		require_once plugin_dir_path( __FILE__ ) . 'templates/predikan-podcast.php';
 	}
 
-	public function feed_link() {
+	public function feed_link( $attributes ) {
 		// Return link to the podcast feed
 		$link = site_url( '/feed/predikan-podcast/' );
-		return '<a href="' . $link . '">anchor text</a>';
+		$attributes = shortcode_atts( array( 'text' => esc_html_x( 'podcast feed', 'Default link text for podcast feed', 'predikan' ) ), $attributes );
+		return '<a href="' . $link . '">' . esc_html( $attributes[ 'text' ] ) . '</a>';
 	}
 }
 
