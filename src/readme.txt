@@ -26,6 +26,7 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 == Changelog ==
 = 2.0.0 =
 * Major rewrite of the podcast feed code, making it more customizable.
+* More options can now be found under settings.
 * Link the podcast feed using [predikan-feed text="link text"].
 * Fix settings link in the plugin manager.
 

@@ -1,5 +1,6 @@
 <?php
-defined( 'WP_UNINSTALL_PLUGIN' ) or die( 'Failed to uninstall plugin: Access denied' );
+defined( 'WP_UNINSTALL_PLUGIN' ) or die( 'Failed to uninstall plugin: Access denied' );
+
 // Remove custom post types
 $predikan_episodes = get_posts( array(
 	'post_type'   => 'predikan',
@@ -18,5 +19,9 @@ foreach ( $predikan_speakers as $predikan_speaker ) {
 }
 
 // Remove settings
-delete_option( 'predikan_description' );
 delete_option( 'predikan_link_sermon' );
+delete_option( 'predikan_title' );
+delete_option( 'predikan_author' );
+delete_option( 'predikan_description' );
+delete_option( 'predikan_owner_name' );
+delete_option( 'predikan_owner_email' );

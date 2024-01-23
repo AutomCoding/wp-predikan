@@ -41,6 +41,9 @@ class Predikan {
 		$this->custom_feed();
 		flush_rewrite_rules();
 
+		// Set podcast title to equal website name if not already set
+		add_option( 'predikan_title', bloginfo( 'name' ) );
+
 		// Set podcast description to equal website tagline if not already set
 		add_option( 'predikan_description', get_option( 'blogdescription' ) );
 	}
@@ -212,7 +215,12 @@ class Predikan {
 		// Handle updates
 		if ( array_key_exists( 'podcast_settings_submit', $_POST ) ) {
 			update_option( 'predikan_link_sermon', ( $_POST[ 'predikan_link_sermon' ] == 'Yes' ) ? 'Yes' : 'No' );
+			update_option( 'predikan_title', $_POST[ 'predikan_title' ] );
+			update_option( 'predikan_author', $_POST[ 'predikan_author' ] );
 			update_option( 'predikan_description', $_POST[ 'predikan_description' ] );
+			update_option( 'predikan_owner_name', $_POST[ 'predikan_owner_name' ] );
+			update_option( 'predikan_owner_email', $_POST[ 'predikan_owner_email' ] );
+
 			echo '<div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">';
 			esc_html_e( 'The settings have been saved', 'predikan' );
 			echo '</div>';

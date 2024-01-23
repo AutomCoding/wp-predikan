@@ -8,11 +8,11 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
 	<channel>
-		<title><?php bloginfo( 'name' ); ?></title>
+		<title><?php get_option( 'predikan_title' ); ?></title>
 		<atom:link href="<?php self_link(); ?>" rel="self" type="application/rss+xml" />
 		<link><?php bloginfo( 'url' ); ?></link>
 		<description><?php get_option( 'predikan_description' ); ?></description>
-		<itunes:author><?php bloginfo( 'name' ); ?></itunes:author>
+		<itunes:author><?php get_option( 'predikan_author' ); ?></itunes:author>
 		<itunes:category text="Religion &amp; Spirituality">
 			<itunes:category text="Christianity"/>
 		</itunes:category>
@@ -20,8 +20,8 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 		<itunes:type>episodic</itunes:type>
 		<itunes:explicit>clean</itunes:explicit>
 		<itunes:owner>
-			<itunes:name><?php bloginfo( 'name' ); ?></itunes:name>
-			<itunes:email><?php bloginfo( 'admin_email' ); ?></itunes:email>
+			<itunes:name><?php get_option( 'predikan_owner_name' ); ?></itunes:name>
+			<itunes:email><?php get_option( 'predikan_owner_email' ); ?></itunes:email>
 		</itunes:owner>
 		<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_lastpostmodified( 'GMT' ), false ); ?></lastBuildDate>
 		<language><?php echo get_locale(); ?></language>
