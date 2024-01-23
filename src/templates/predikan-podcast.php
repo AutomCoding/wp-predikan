@@ -24,7 +24,7 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 			<itunes:email><?php get_option( 'predikan_owner_email' ); ?></itunes:email>
 		</itunes:owner>
 		<lastBuildDate><?php echo mysql2date( 'D, d M Y H:i:s +0000', get_lastpostmodified( 'GMT' ), false ); ?></lastBuildDate>
-		<language><?php echo get_locale(); ?></language>
+		<language><?php echo substr( get_locale(), 0, 2 ); ?></language>
 		<sy:updatePeriod><?php echo apply_filters( 'rss_update_period', 'hourly' ); ?></sy:updatePeriod>
 		<sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', '1' ); ?></sy:updateFrequency>
 		<?php do_action( 'rss2_head' ); ?>
