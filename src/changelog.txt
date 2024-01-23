@@ -1,3 +1,9 @@
+= 2.0.0 =
+* Major rewrite of the podcast feed code, making it more customizable.
+* More options can now be found under settings.
+* Link the podcast feed using `[predikan-feed text="link text"]`.
+* Fix settings link in the plugin manager.
+
 = 1.6.2 =
 * Add banner image for the plugin repository.
 * Test with the latest WordPress version.

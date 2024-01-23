@@ -1,3 +1,6 @@
+= 2.0.0 =
+This major rewrite of the podcast feed brings many new customization options.
+
 = 1.6.2 =
 Testing with the latest WordPress version and plugin directory artwork.
 

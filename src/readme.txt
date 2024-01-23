@@ -19,7 +19,10 @@ The plugin can be installed through the WordPress plugin manager.
 = Adding the table =
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
-== Frequently asked questions == 
+= Feed location =
+You’ll find the feed under `/feed/predikan-podcast/`. Link the podcast feed using `[predikan-feed text="link text"]`.
+
+== Frequently asked questions ==
 = How do I insert the table? =
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
@@ -27,19 +30,8 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 = 2.0.0 =
 * Major rewrite of the podcast feed code, making it more customizable.
 * More options can now be found under settings.
-* Link the podcast feed using [predikan-feed text="link text"].
+* Link the podcast feed using `[predikan-feed text="link text"]`.
 * Fix settings link in the plugin manager.
-
-= 1.6.2 =
-* Add banner image for the plugin repository.
-* Test with the latest WordPress version.
-
-= 1.6.1 =
-* Security related bug fixed.
-
-= 1.6.0 =
-* Add ability to link to the sermon’s page from the table.
-* Move configuration page to Settings in the admin menu.
 
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
