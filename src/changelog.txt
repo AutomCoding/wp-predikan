@@ -1,3 +1,8 @@
+= 2.0.1 =
+* Fix episode descriptions in the podcast feed.
+* Minor security fixes.
+* Update defult channel logotype.
+
 = 2.0.0 =
 * Major rewrite of the podcast feed code, making it more customizable.
 * More options can now be found under settings.

@@ -266,6 +266,7 @@ class Predikan {
 				'unix_time'       => $unix_time,
 				'date'            => wp_date( get_option( 'date_format' ), $unix_time ),
 				'title'           => $episode->post_title,
+				'content'         => $episode->post_content,
 				'permalink'       => get_post_permalink( $episode),
 				'speakers'        => $speaker_names,
 				'speakers_string' => implode( ', ', $speaker_names ),

@@ -32,9 +32,9 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 		<item>
 			<title><?php echo esc_xml( $ep[ 'title' ] ); ?></title>
 			<link><?php echo $ep[ 'permalink' ]; ?></link>
-			<description><![CDATA[<?php echo $ep[ 'title' ]; ?>]]></description>
+			<description><![CDATA[<?php echo strip_shortcodes( $ep[ 'content' ] ) . '<br/>' . $ep[ 'speakers_string' ] . ' (' . $ep[ 'date' ] . ')'; ?>]]></description>
 			<pubDate><?php echo date( 'r', $ep[ 'unix_time' ] ); ?></pubDate>
-			<content:encoded><![CDATA[<?php echo $ep[ 'title' ] . '<br/>' . $ep[ 'speakers_string' ] . ' ' . $ep[ 'date' ]; ?>]]></content:encoded>
+			<content:encoded><![CDATA[<?php echo strip_shortcodes( $ep[ 'content' ] ) . '<br/>' . $ep[ 'speakers_string' ] . ' (' . $ep[ 'date' ] . ')'; ?>]]></content:encoded>
 			<enclosure url="<?php echo esc_attr( $ep[ 'file' ] ); ?>" length="<?php echo filesize( $ep[ 'file' ] ); ?>" type="audio/mpeg"/>
 		</item>
 		<?php endforeach; ?>

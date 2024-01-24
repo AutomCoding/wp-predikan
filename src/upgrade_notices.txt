@@ -1,3 +1,6 @@
+= 2.0.1 =
+Various bugfixes in the podcast feed.
+
 = 2.0.0 =
 This major rewrite of the podcast feed brings many new customization options.
 

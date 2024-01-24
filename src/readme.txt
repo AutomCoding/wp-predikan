@@ -27,6 +27,11 @@ You’ll find the feed under `/feed/predikan-podcast/`. Link the podcast feed us
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 2.0.1 =
+* Fix episode descriptions in the podcast feed.
+* Minor security fixes.
+* Update defult channel logotype.
+
 = 2.0.0 =
 * Major rewrite of the podcast feed code, making it more customizable.
 * More options can now be found under settings.
