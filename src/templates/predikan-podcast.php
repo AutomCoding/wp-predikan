@@ -16,7 +16,7 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 		<itunes:category text="Religion &amp; Spirituality">
 			<itunes:category text="Christianity"/>
 		</itunes:category>
-		<itunes:image href="https://pingsthelsingborg.se/podcast/channel-logo.png"/>
+		<itunes:image href="<?php plugin_dir_url( __FILE__ ) . 'images/channel-logo.png'; ?>"/>
 		<itunes:type>episodic</itunes:type>
 		<itunes:explicit>clean</itunes:explicit>
 		<itunes:owner>
@@ -27,7 +27,6 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 		<language><?php echo substr( get_locale(), 0, 2 ); ?></language>
 		<sy:updatePeriod><?php echo apply_filters( 'rss_update_period', 'hourly' ); ?></sy:updatePeriod>
 		<sy:updateFrequency><?php echo apply_filters( 'rss_update_frequency', '1' ); ?></sy:updateFrequency>
-		<?php do_action( 'rss2_head' ); ?>
 		<?php foreach( $episodes as $ep ): ?>
 
 		<item>
