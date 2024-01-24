@@ -30,7 +30,7 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 = 2.0.1 =
 * Fix episode descriptions in the podcast feed.
 * Minor security fixes.
-* Update defult channel logotype.
+* Update default channel logotype.
 
 = 2.0.0 =
 * Major rewrite of the podcast feed code, making it more customizable.
