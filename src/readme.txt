@@ -27,6 +27,10 @@ You’ll find the feed under `/feed/predikan-podcast/`. Link the podcast feed us
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
+= 2.0.2 =
+* Fixes for episode descriptions and audio files in the podcast feed.
+* Cleanup of settings page.
+
 = 2.0.1 =
 * Fix episode descriptions in the podcast feed.
 * Minor security fixes.

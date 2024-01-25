@@ -267,10 +267,11 @@ class Predikan {
 				'date'            => wp_date( get_option( 'date_format' ), $unix_time ),
 				'title'           => $episode->post_title,
 				'content'         => $episode->post_content,
+				'guid'            => $episode->guid,
 				'permalink'       => get_post_permalink( $episode),
 				'speakers'        => $speaker_names,
 				'speakers_string' => implode( ', ', $speaker_names ),
-				'file'            => get_post_meta( $episode->ID, '_predikan_audio_file', true )
+				'enclosure'       => explode( "\n", get_post_meta( $episode->ID, 'enclosure', true ) )
 			) );
 		}
 		usort( $data, function( $a, $b ) {

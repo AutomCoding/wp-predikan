@@ -31,11 +31,12 @@ echo '<?xml version="1.0" encoding="' . get_option('blog_charset') . '"?>';
 
 		<item>
 			<title><?php echo esc_xml( $ep[ 'title' ] ); ?></title>
+			<guid isPermaLink="true"><?php echo $ep[ 'guid' ]; ?></guid>
 			<link><?php echo $ep[ 'permalink' ]; ?></link>
-			<description><![CDATA[<?php echo strip_shortcodes( $ep[ 'content' ] ) . '<br/>' . $ep[ 'speakers_string' ] . ' (' . $ep[ 'date' ] . ')'; ?>]]></description>
+			<description><![CDATA[<?php echo nl2br( trim( strip_shortcodes( $ep[ 'content' ] ) ) ) . '<br/>' . $ep[ 'speakers_string' ] . ' (' . $ep[ 'date' ] . ')'; ?>]]></description>
 			<pubDate><?php echo date( 'r', $ep[ 'unix_time' ] ); ?></pubDate>
-			<content:encoded><![CDATA[<?php echo strip_shortcodes( $ep[ 'content' ] ) . '<br/>' . $ep[ 'speakers_string' ] . ' (' . $ep[ 'date' ] . ')'; ?>]]></content:encoded>
-			<enclosure url="<?php echo esc_attr( $ep[ 'file' ] ); ?>" length="<?php echo filesize( $ep[ 'file' ] ); ?>" type="audio/mpeg"/>
+			<content:encoded><![CDATA[<?php echo nl2br( trim( strip_shortcodes( $ep[ 'content' ] ) ) ) . '<br/>' . $ep[ 'speakers_string' ] . ' (' . $ep[ 'date' ] . ')'; ?>]]></content:encoded>
+			<enclosure url="<?php echo esc_attr( $ep[ 'enclosure' ][ 0 ] ); ?>" length="<?php echo esc_attr( $ep[ 'enclosure' ][ 1 ] ); ?>" type="<?php echo esc_attr( $ep[ 'enclosure' ][ 2 ] ); ?>"/>
 		</item>
 		<?php endforeach; ?>
 

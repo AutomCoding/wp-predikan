@@ -1,3 +1,6 @@
+= 2.0.2 =
+The settings page has been overhauled and various bugfixes made.
+
 = 2.0.1 =
 Various bugfixes in the podcast feed.
 
