@@ -138,16 +138,6 @@ class Predikan {
 			'side',
 			'core'
 		);
-
-		// Add a meta box for the audio file for CPT predikan
-		add_meta_box(
-			'predikan-audio-file',
-			esc_html__( 'Audio file', 'predikan' ),
-			array( $this, 'callback_audio_meta_box' ),
-			'predikan',
-			'normal',
-			'core'
-		);
 	}
 
 	public function callback_date_meta_box( $post ) {
@@ -163,24 +153,6 @@ class Predikan {
 		<?php
 	}
 
-	public function callback_audio_meta_box( $post ) {
-		// Callback for meta box for the audio file for CPT predikan
-		$file = get_post_meta( $post->ID, '_predikan_audio_file', true );
-		?>
-			<audio id="predikan_audio_preview" preload="none" style="width: 100%;" controls="controls" src="<?php echo $file; ?>"></audio>
-			<br />
-			<input id="predikan_audio_file" name="predikan_audio_file" style="width: 100%;" type="url" value="<?php echo $file; ?>"/>
-			<p class="howto">
-				<?php echo esc_html__( 'Complete URL of the audiofile that will be posted in the podcast and displayed on the website.', 'predikan' ); ?>
-			</p>
-			<script>
-				jQuery( '#predikan_audio_file' ).change( function() {
-					jQuery( '#predikan_audio_preview' ).attr( 'src' , jQuery( '#predikan_audio_file' ).val() );
-				} );
-			</script>
-		<?php
-	}
-
 	public function date_meta_boxes_save( $post_id ) {
 		// Save data from meta boxes
 		$is_autosave = wp_is_post_autosave( $post_id );
@@ -191,13 +163,14 @@ class Predikan {
 		if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
 			return;
 		}
+
+		// Save recording date
 		if ( isset( $_POST[ 'predikan_rec_date' ] ) ) {
 			update_post_meta( $post_id, '_predikan_rec_date', sanitize_text_field( $_POST[ 'predikan_rec_date' ] ) );
 		}
-		if ( isset( $_POST[ 'predikan_audio_file' ] ) ) {
-			update_post_meta( $post_id, '_predikan_audio_file', sanitize_text_field( $_POST[ 'predikan_audio_file' ] ) );
-			do_enclose( sanitize_text_field( $_POST[ 'predikan_audio_file' ] ), $post_id );
-		}
+
+		// Enclose audio file if present in post content
+		do_enclose( null, $post_id );
 	}
 
 	public function add_admin_pages() {
