@@ -23,6 +23,9 @@ Put the text `[predikan]` (including square brackets) on any page and it will be
 You’ll find the feed under `/feed/predikan-podcast/`. Link the podcast feed using `[predikan-feed text="link text"]`.
 
 == Frequently asked questions ==
+= Where do I put the audio file? =
+Upload the file using the media library and add it to the episode description using the “Add Media” button.
+
 = How do I insert the table? =
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
