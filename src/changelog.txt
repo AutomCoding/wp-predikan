@@ -1,4 +1,5 @@
-= 2.0.2 =
+= 2.1.0 =
+* Simplified audio handling.
 * Fixes for episode descriptions and audio files in the podcast feed.
 * Cleanup of settings page.
 

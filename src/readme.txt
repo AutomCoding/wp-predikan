@@ -27,20 +27,10 @@ You’ll find the feed under `/feed/predikan-podcast/`. Link the podcast feed us
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
-= 2.0.2 =
+= 2.1.0 =
+* Simplified audio handling.
 * Fixes for episode descriptions and audio files in the podcast feed.
 * Cleanup of settings page.
-
-= 2.0.1 =
-* Fix episode descriptions in the podcast feed.
-* Minor security fixes.
-* Update default channel logotype.
-
-= 2.0.0 =
-* Major rewrite of the podcast feed code, making it more customizable.
-* More options can now be found under settings.
-* Link the podcast feed using `[predikan-feed text="link text"]`.
-* Fix settings link in the plugin manager.
 
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
