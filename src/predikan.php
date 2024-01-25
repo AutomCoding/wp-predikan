@@ -304,10 +304,10 @@ class Predikan {
 			$table .= '<tr><td>' . $ep[ 'date' ] . '</td><td>' . $ep[ 'speakers_string' ] . '</td><td>';
 			$table .= ( $link_sermon ) ? '<a href="' . $ep[ 'permalink' ] . '">' . $ep[ 'title' ] . '</a>' : $ep[ 'title' ];
 			$table .= '</td><td>';
-			if ( $ep[ 'file' ] == null ) {
+			if ( empty( $ep[ 'enclosure' ][ 0 ] ) ) {
 				$table .= esc_html_x( 'no file available', 'Displayed in table instead of audio player', 'predikan' );
 			} else {
-				$table .= '<audio controls="controls" preload="none"><source src="' . $ep[ 'file' ] . '" type="audio/mpeg"/></audio>';
+				$table .= '<audio controls="controls" preload="none"><source src="' . $ep[ 'enclosure' ][ 0 ] . '" type="' . $ep[ 'enclosure' ][ 2 ] . '"/></audio>';
 			}
 			$table .= '</td></tr>';
 		}
