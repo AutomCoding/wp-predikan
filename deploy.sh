@@ -23,7 +23,7 @@ rm -rf ./svn/trunk/*
 cp -R ./src/* ./svn/trunk
 
 # Copy the images from `assets` to `svn/assets`
-rm -rf ./svn/assets*
+rm -rf ./svn/assets/*
 cp -R ./assets/* ./svn/assets
 
 # Switch to SVN directory
