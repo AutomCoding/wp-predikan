@@ -2,7 +2,7 @@
 Contributors: automcoding
 Tags: church, podcast, sermon
 Requires at least: 5.3.0
-Tested up to: 6.6.1
+Tested up to: 6.8.0
 Requires PHP: 7.0.0
 Stable tag: __STABLE_TAG__
 License: GPLv3 or later
@@ -30,10 +30,8 @@ Upload the file using the media library and add it to the episode description us
 Put the text `[predikan]` (including square brackets) on any page and it will be replaced by the table upon publishing.
 
 == Changelog ==
-= 2.1.0 =
-* Simplified audio handling.
-* Fixes for episode descriptions and audio files in the podcast feed.
-* Cleanup of settings page.
+= 2.1.1 =
+* Tested with WordPress 6.8.
 
 [Earlier versions](https://plugins.svn.wordpress.org/predikan/trunk/changelog.txt)
 
