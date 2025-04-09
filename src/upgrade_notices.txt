@@ -1,3 +1,6 @@
+= 2.1.1 =
+The plugin has been tested with WordPress 6.8.
+
 = 2.1.0 =
 The audio file handling has been simplified, the settings page overhauled and various bugfixes made.
 
